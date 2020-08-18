@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Tutorial.NHibernateSpatial"
+                   namespace="Tutorial.NHibernateSpatial">
+  <class name="Tutorial.NHibernateSpatial.PolygonFeature" table="polygons" lazy="false">
+    <id name="ID" column="id" type="long">
+      <generator class="sequence">
+        <param name="sequence">polygons_id_sequence</param>
+      </generator>
+    </id>
+    <property name="Name" column="name" type="string"></property>
+    <property name="Geometry" column="geom" type="NHibernate.Spatial.Type.GeometryType, NHibernate.Spatial"></property>
+  </class>
+</hibernate-mapping>
